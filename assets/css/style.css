@@ -198,6 +198,7 @@ img{display:block;max-width:100%}
   .hero-roles,.hero-badges,.hero-meta,.hero-btns,.hero-phone-box{justify-content:center}
   .about-grid,.contact-wrap{grid-template-columns:1fr}
   .svc-grid{grid-template-columns:1fr 1fr}
+  .industries-grid{grid-template-columns:repeat(2,1fr)}
   .proj-grid{grid-template-columns:1fr 1fr}
   .certs-grid,.test-grid{grid-template-columns:1fr}
   .cert-hl-grid{grid-template-columns:1fr 1fr}
@@ -211,6 +212,18 @@ img{display:block;max-width:100%}
 @media(max-width:600px){
   .hero-name{font-size:28px}
   .svc-grid,.proj-grid,.cert-hl-grid{grid-template-columns:1fr}
+  .industries-grid{grid-template-columns:repeat(2,1fr)}
   .stats-inner{grid-template-columns:repeat(2,1fr)}
   .kpi-row{flex-direction:column}
 }
+/* ── INDUSTRIES SECTION ── */
+.industries-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ind-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r);padding:18px 16px;text-align:center;transition:all .22s;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.ind-card:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:var(--sh)}
+.ind-icon{font-size:28px;margin-bottom:8px}
+.ind-name{font-size:12px;font-weight:700;color:var(--text);margin-bottom:3px}
+.ind-sub{font-size:11px;color:var(--gray-400)}
+.c-svc{background:#f0fdf4;color:#166534}
+/* Platform logos */
+.plat-img{width:22px;height:22px;object-fit:contain;border-radius:4px;display:block}
+.soc-btn img{width:18px;height:18px;object-fit:contain;border-radius:3px;flex-shrink:0}
