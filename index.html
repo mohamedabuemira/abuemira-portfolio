@@ -215,7 +215,7 @@ img { display: block; max-width: 100%; }
   font-weight: 700; color: #fff;
   letter-spacing: -.03em; line-height: 1.1; margin-bottom: 22px;
 }
-.hero-title em { font-style: italic; color: var(--gold); font-weight: 300; }
+.hero-title em { font-style: italic; color: var(--gold); font-weight: 300; opacity: 1 !important; }
 .hero-sub {
   font-size: 17px; color: rgba(255,255,255,.72);
   max-width: 520px; line-height: 1.75; margin-bottom: 36px;
@@ -650,7 +650,7 @@ img { display: block; max-width: 100%; }
    FLOATING BUTTONS
    ═══════════════════════════════════════════════ */
 #scrollTop {
-  position: fixed; bottom: 86px; right: 24px;
+  position: fixed; bottom: 90px; right: 20px;
   width: 44px; height: 44px; border-radius: 50%;
   background: var(--bg-3); color: var(--gold); border: 1px solid rgba(113,75,103,.3);
   font-size: 17px; cursor: pointer;
@@ -815,8 +815,8 @@ img { display: block; max-width: 100%; }
 /* LIGHT hero text */
 [data-theme="light"] .hero .hero-eyebrow { color: #017E84; background: rgba(1,126,132,.1); border-color: rgba(1,126,132,.25); }
 [data-theme="light"] .hero .eyebrow-dot  { background: #017E84; }
-[data-theme="light"] .hero .hero-title   { color: var(--text); }
-[data-theme="light"] .hero .hero-title em { color: #714B67; }
+[data-theme="light"] .hero .hero-title   { color: #2C1A35; }
+[data-theme="light"] .hero .hero-title em { color: #714B67; font-style: italic; opacity: 1; }
 [data-theme="light"] .hero .hero-sub     { color: var(--text-2); }
 [data-theme="light"] .hero .hero-sub strong { color: #017E84; }
 [data-theme="light"] .hero .btn-ghost    { color: var(--text-2); border-color: var(--border); }
@@ -854,6 +854,98 @@ img { display: block; max-width: 100%; }
   .hero-photo-card { width: 100% !important; max-width: 320px !important; margin: 0 auto !important; }
   .hero .stat-n { font-size: 32px !important; }
 }
+
+
+/* ── LIGHT MODE HERO: fix italic/em visibility ── */
+[data-theme="light"] .hero-title em {
+  color: #714B67 !important;
+  opacity: 1 !important;
+  font-weight: 400 !important;
+}
+[data-theme="light"] .hero-title {
+  color: #2C1A35 !important;
+}
+/* Sub text darker in light */
+[data-theme="light"] .hero .hero-sub {
+  color: #6B5778 !important;
+}
+/* Hero photo — fix image not showing (z-index / overflow issue) */
+.hero-photo-card { position: relative; z-index: 2; }
+.hero-photo-card > div { overflow: hidden !important; border-radius: 16px !important; }
+.hero-photo-card img {
+  width: 100% !important;
+  height: 400px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+/* WhatsApp ghost btn fix in light */
+[data-theme="light"] .hero .btn-ghost {
+  color: #2C1A35 !important;
+  border-color: rgba(113,75,103,.3) !important;
+  background: rgba(113,75,103,.06) !important;
+}
+[data-theme="light"] .hero .btn-ghost:hover {
+  background: rgba(113,75,103,.12) !important;
+  border-color: #714B67 !important;
+  color: #714B67 !important;
+}
+/* Stats labels in light */
+[data-theme="light"] .hero .stat-l {
+  color: #6B5778 !important;
+  font-weight: 700 !important;
+}
+/* Hero border top in light */
+[data-theme="light"] .hero .hero-stats {
+  border-top-color: rgba(113,75,103,.2) !important;
+}
+
+
+/* ── Photo badge: light mode ── */
+[data-theme="light"] .hero-photo-card > div > div:last-child {
+  background: rgba(44,26,53,.92) !important;
+}
+/* Hero glow: theme aware */
+[data-theme="light"] .hero-glow {
+  background: radial-gradient(circle, rgba(113,75,103,.08) 0%, transparent 65%) !important;
+}
+
+
+/* ── EYEBROW: visible in both themes ── */
+[data-theme="light"] .hero-eyebrow {
+  color: #014f53 !important;
+  background: rgba(1,126,132,.1) !important;
+  border: 1.5px solid rgba(1,126,132,.4) !important;
+  font-weight: 700 !important;
+}
+[data-theme="light"] .hero-eyebrow .eyebrow-dot {
+  background: #017E84 !important;
+  box-shadow: 0 0 0 3px rgba(1,126,132,.2) !important;
+}
+[data-theme="dark"] .hero-eyebrow {
+  color: #5eead4 !important;
+  background: rgba(1,126,132,.15) !important;
+  border: 1.5px solid rgba(1,126,132,.35) !important;
+}
+
+/* ── STAT COUNTER: smooth count-up animation ── */
+.stat-n {
+  transition: none;
+  display: inline-block;
+}
+/* Easing for count animation feel */
+@keyframes statPop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+.stat-n.done { animation: statPop .3s ease; }
+
+/* ── Fix scrollTop button not overlapping stats ── */
+#scrollTop { bottom: 92px !important; right: 20px !important; }
+#waFloat   { bottom: 30px !important; right: 20px !important; }
 
 </style>
 </head>
@@ -907,7 +999,7 @@ img { display: block; max-width: 100%; }
     <div class="hero-photo-card fu" style="transition-delay:.18s;align-self:flex-start;width:340px;flex-shrink:0;">
       <div style="border-radius:16px;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.4);">
         <img src="./assets/img/abu-emira.jpg" alt="Mohamed Essam Abu Emira" style="width:100%;height:400px;object-fit:cover;object-position:center top;display:block;">
-        <div style="position:static;background:rgba(20,8,32,.93);backdrop-filter:blur(12px);padding:18px 20px;border-top:2px solid #017E84;text-align:center;">
+        <div style="position:static;background:var(--bg-alt,rgba(20,8,32,.93));backdrop-filter:blur(12px);padding:18px 20px;border-top:2px solid #017E84;text-align:center;">
           <div style="font-family:'Inter',sans-serif;font-size:16px;color:#fff;font-weight:700;letter-spacing:-.01em;">Mohamed Essam Abu Emira</div>
           <div style="font-size:12px;color:#5eead4;margin-top:5px;font-weight:500;line-height:1.5;">Odoo ERP Consultant<br>Business Transformation Expert</div>
         </div>
@@ -1790,23 +1882,41 @@ document.querySelectorAll('.skill-fill').forEach(bar => {
   obs.observe(bar);
 });
 
-/* ── STAT COUNTER with fallback ── */
+/* ── STAT COUNTER: animates from 0 on page load ── */
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.target === '25' ? '%+' : '+';
+  el.textContent = '0' + suffix; // start from 0
+  let cur = 0;
+  const duration = 1800; // ms
+  const steps = 60;
+  const increment = target / steps;
+  const interval = duration / steps;
+  const t = setInterval(() => {
+    cur = Math.min(cur + increment, target);
+    el.textContent = Math.floor(cur) + suffix;
+    if (cur >= target) {
+      el.textContent = target + suffix;
+      el.classList.add('done');
+      clearInterval(t);
+    }
+  }, interval);
+}
+
 const cntObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (!e.isIntersecting) return;
-    const el = e.target;
-    const target = parseInt(el.dataset.target);
-    const suffix = el.dataset.target === '25' ? '%+' : '+';
-    let cur = 0; const step = Math.ceil(target / 45);
-    const t = setInterval(() => {
-      cur = Math.min(cur + step, target);
-      el.textContent = cur + suffix;
-      if (cur >= target) clearInterval(t);
-    }, 28);
-    cntObs.unobserve(el);
+    animateCounter(e.target);
+    cntObs.unobserve(e.target);
   });
-}, { threshold: 0.4 });
-document.querySelectorAll('[data-target]').forEach(el => cntObs.observe(el));
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => {
+  // Set initial display to target value as fallback
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.target === '25' ? '%+' : '+';
+  el.textContent = target + suffix;
+  cntObs.observe(el);
+});
 
 /* ── PROJECT FILTER ── */
 document.getElementById('filterRow').addEventListener('click', e => {
