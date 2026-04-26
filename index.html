@@ -180,7 +180,7 @@ img { display: block; max-width: 100%; }
    ═══════════════════════════════════════════════ */
 .hero {
   min-height: 100vh; max-height: 100vh;
-  background: #3D2645 !important;
+  background: var(--bg);
   display: flex; flex-direction: column; justify-content: center;
   padding: 88px 60px 56px; position: relative; overflow: hidden;
 }
@@ -722,7 +722,7 @@ img { display: block; max-width: 100%; }
 .hero,
 [data-theme="light"] .hero,
 [data-theme="dark"] .hero {
-  background: #3D2645 !important;
+  background: var(--bg);
   color: #fff !important;
 }
 .hero .hero-eyebrow {
@@ -782,16 +782,7 @@ img { display: block; max-width: 100%; }
   overflow: hidden !important;
 }
 
-/* ── NAV on hero — force dark nav ── */
-[data-theme="light"] .nav {
-  background: rgba(55,32,64,.97) !important;
-  border-bottom-color: rgba(1,126,132,.2) !important;
-}
-[data-theme="light"] .nav-brand,
-[data-theme="light"] .nav-links a {
-  color: rgba(255,255,255,.75) !important;
-}
-[data-theme="light"] .nav-links a:hover { color: #fff !important; }
+
 
 /* ── Mobile ── */
 @media (max-width: 960px) {
@@ -801,34 +792,67 @@ img { display: block; max-width: 100%; }
 }
 
 
-/* ══ HERO: Identical in BOTH themes ══ */
-[data-theme="light"] .hero,
-[data-theme="dark"] .hero {
-  background: #3D2645 !important;
+
+
+
+
+/* ══ HERO: Theme-aware (follows toggle) ══ */
+[data-theme="dark"] .hero { background: var(--bg) !important; }
+[data-theme="light"] .hero { background: var(--bg) !important; }
+
+/* DARK hero text */
+[data-theme="dark"] .hero .hero-eyebrow { color: #5eead4; background: rgba(1,126,132,.15); border-color: rgba(1,126,132,.3); }
+[data-theme="dark"] .hero .eyebrow-dot  { background: #017E84; }
+[data-theme="dark"] .hero .hero-title   { color: #fff; }
+[data-theme="dark"] .hero .hero-sub     { color: rgba(255,255,255,.72); }
+[data-theme="dark"] .hero .hero-sub strong { color: #5eead4; }
+[data-theme="dark"] .hero .btn-ghost    { color: rgba(255,255,255,.8); border-color: rgba(255,255,255,.2); }
+[data-theme="dark"] .hero .btn-ghost:hover { color: #fff; border-color: rgba(255,255,255,.5); background: rgba(255,255,255,.07); }
+[data-theme="dark"] .hero .hero-stats   { border-top-color: rgba(255,255,255,.15); }
+[data-theme="dark"] .hero .stat-n       { color: #017E84; }
+[data-theme="dark"] .hero .stat-l       { color: rgba(255,255,255,.78); }
+
+/* LIGHT hero text */
+[data-theme="light"] .hero .hero-eyebrow { color: #017E84; background: rgba(1,126,132,.1); border-color: rgba(1,126,132,.25); }
+[data-theme="light"] .hero .eyebrow-dot  { background: #017E84; }
+[data-theme="light"] .hero .hero-title   { color: var(--text); }
+[data-theme="light"] .hero .hero-title em { color: #714B67; }
+[data-theme="light"] .hero .hero-sub     { color: var(--text-2); }
+[data-theme="light"] .hero .hero-sub strong { color: #017E84; }
+[data-theme="light"] .hero .btn-ghost    { color: var(--text-2); border-color: var(--border); }
+[data-theme="light"] .hero .btn-ghost:hover { color: var(--text); border-color: var(--border-h); background: var(--bg-3); }
+[data-theme="light"] .hero .hero-stats   { border-top-color: var(--border); }
+[data-theme="light"] .hero .stat-n       { color: #017E84; }
+[data-theme="light"] .hero .stat-l       { color: var(--text-2); }
+[data-theme="light"] .hero .hero-grid-bg {
+  background-image:
+    linear-gradient(rgba(113,75,103,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(113,75,103,.07) 1px, transparent 1px) !important;
 }
-/* Nav matches hero always */
-[data-theme="light"] .nav,
-[data-theme="dark"] .nav {
-  background: rgba(45,22,56,.97) !important;
-  border-bottom-color: rgba(1,126,132,.2) !important;
-}
-[data-theme="light"] .nav-brand,
-[data-theme="light"] .nav-links a,
-[data-theme="light"] .hamburger,
-[data-theme="light"] .theme-btn {
-  color: rgba(255,255,255,.8) !important;
-  border-color: rgba(255,255,255,.15) !important;
-  background: transparent !important;
-}
-[data-theme="light"] .nav-links a:hover {
-  color: #fff !important;
-  background: rgba(255,255,255,.08) !important;
-}
-/* Hero photo card width on mobile */
+
+/* NAV: follows theme too */
+[data-theme="light"] .nav { background: rgba(255,255,255,.96) !important; border-bottom-color: rgba(113,75,103,.12) !important; }
+[data-theme="light"] .nav-brand { color: var(--text) !important; }
+[data-theme="light"] .nav-gold  { color: #714B67 !important; }
+[data-theme="light"] .nav-links a { color: var(--text-2) !important; }
+[data-theme="light"] .nav-links a:hover { color: var(--text) !important; background: var(--bg-3) !important; }
+[data-theme="light"] .hamburger { color: var(--text) !important; }
+[data-theme="light"] .theme-btn { background: var(--bg-3) !important; border-color: var(--border) !important; color: var(--text) !important; }
+
+[data-theme="dark"] .nav { background: rgba(45,22,56,.97) !important; border-bottom-color: rgba(1,126,132,.2) !important; }
+[data-theme="dark"] .nav-brand { color: #fff !important; }
+[data-theme="dark"] .nav-links a { color: rgba(255,255,255,.72) !important; }
+[data-theme="dark"] .nav-links a:hover { color: #fff !important; background: rgba(255,255,255,.08) !important; }
+[data-theme="dark"] .hamburger { color: #fff !important; }
+
+/* Stats always big */
+.hero .stat-n { font-size: 42px !important; font-weight: 800 !important; line-height: 1 !important; }
+.hero .stat-l { font-size: 11px !important; font-weight: 700 !important; letter-spacing: .12em !important; text-transform: uppercase !important; margin-top: 7px !important; }
+
+/* Mobile */
 @media (max-width: 960px) {
-  .hero-inner { grid-template-columns: 1fr !important; }
   .hero-photo-card { width: 100% !important; max-width: 320px !important; margin: 0 auto !important; }
-  .hero-photo-card img { height: 300px !important; }
+  .hero .stat-n { font-size: 32px !important; }
 }
 
 </style>
@@ -909,7 +933,7 @@ img { display: block; max-width: 100%; }
 </div>
 
 <!-- ── COMPANY LOGOS ── -->
-<div class="logos-bar">
+<!-- <div class="logos-bar">
   <div class="logos-inner">
     <div class="logos-label">Companies I've worked with</div>
     <div class="logos-grid">
@@ -950,7 +974,7 @@ img { display: block; max-width: 100%; }
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- ── ABOUT ── -->
 <section class="section" id="about">
