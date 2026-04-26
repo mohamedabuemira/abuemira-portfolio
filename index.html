@@ -800,6 +800,37 @@ img { display: block; max-width: 100%; }
   .hero .stat-n { font-size: 34px !important; }
 }
 
+
+/* ══ HERO: Identical in BOTH themes ══ */
+[data-theme="light"] .hero,
+[data-theme="dark"] .hero {
+  background: #3D2645 !important;
+}
+/* Nav matches hero always */
+[data-theme="light"] .nav,
+[data-theme="dark"] .nav {
+  background: rgba(45,22,56,.97) !important;
+  border-bottom-color: rgba(1,126,132,.2) !important;
+}
+[data-theme="light"] .nav-brand,
+[data-theme="light"] .nav-links a,
+[data-theme="light"] .hamburger,
+[data-theme="light"] .theme-btn {
+  color: rgba(255,255,255,.8) !important;
+  border-color: rgba(255,255,255,.15) !important;
+  background: transparent !important;
+}
+[data-theme="light"] .nav-links a:hover {
+  color: #fff !important;
+  background: rgba(255,255,255,.08) !important;
+}
+/* Hero photo card width on mobile */
+@media (max-width: 960px) {
+  .hero-inner { grid-template-columns: 1fr !important; }
+  .hero-photo-card { width: 100% !important; max-width: 320px !important; margin: 0 auto !important; }
+  .hero-photo-card img { height: 300px !important; }
+}
+
 </style>
 </head>
 <body>
@@ -842,14 +873,6 @@ img { display: block; max-width: 100%; }
         <a href="https://calendly.com/abuemira/30min" target="_blank" class="btn-primary" style="background:#017E84;color:#fff;">📅 Book a Free ERP Consultation</a>
         <a href="https://wa.me/201005061349" target="_blank" class="btn-ghost">💬 WhatsApp Me Now</a>
       </div>
-      <!-- Hero trust signals -->
-      <div class="hero-trust fu" style="transition-delay:.30s;display:flex;align-items:center;gap:16px;margin-bottom:20px;flex-wrap:wrap;">
-        <span style="font-size:11px;color:rgba(255,255,255,.5);font-weight:600;text-transform:uppercase;letter-spacing:.08em;">Trusted by</span>
-        <span style="font-size:12px;color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:3px 12px;border-radius:20px;">🏛️ Saudi Gov. Ministries</span>
-        <span style="font-size:12px;color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:3px 12px;border-radius:20px;">🏗️ Construction Groups</span>
-        <span style="font-size:12px;color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:3px 12px;border-radius:20px;">🍽️ F&B Chains</span>
-        <span style="font-size:12px;color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:3px 12px;border-radius:20px;">🏭 Manufacturers</span>
-      </div>
       <div class="hero-stats fu" style="transition-delay:.38s">
         <div><div class="stat-n" data-target="8">8+</div><div class="stat-l">Years Experience</div></div>
         <div><div class="stat-n" data-target="60">60+</div><div class="stat-l">Projects Delivered</div></div>
@@ -857,12 +880,12 @@ img { display: block; max-width: 100%; }
         <div><div class="stat-n" data-target="40">40+</div><div class="stat-l">Certifications</div></div>
       </div>
     </div>
-    <div class="hero-photo-card fu" style="transition-delay:.18s;align-self:flex-start;">
-      <div class="hero-photo-inner" style="border-radius:14px;overflow:hidden;position:relative;">
-        <img src="./assets/img/abu-emira.jpg" alt="Mohamed Essam Abu Emira" style="width:100%;height:340px;object-fit:cover;object-position:center top;display:block;">
-        <div class="hero-photo-badge" style="position:static;background:rgba(28,10,40,.92);backdrop-filter:blur(10px);padding:14px 18px;border-top:1px solid rgba(1,126,132,.3);">
-          <div class="photo-name" style="font-family:'Inter',serif;font-size:15px;color:#fff;font-weight:600;">Mohamed Essam Abu Emira</div>
-          <div class="photo-role" style="font-size:11.5px;color:#5eead4;margin-top:3px;font-weight:500;">Odoo ERP Consultant · Business Transformation Expert</div>
+    <div class="hero-photo-card fu" style="transition-delay:.18s;align-self:flex-start;width:340px;flex-shrink:0;">
+      <div style="border-radius:16px;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.4);">
+        <img src="./assets/img/abu-emira.jpg" alt="Mohamed Essam Abu Emira" style="width:100%;height:400px;object-fit:cover;object-position:center top;display:block;">
+        <div style="position:static;background:rgba(20,8,32,.93);backdrop-filter:blur(12px);padding:18px 20px;border-top:2px solid #017E84;text-align:center;">
+          <div style="font-family:'Inter',sans-serif;font-size:16px;color:#fff;font-weight:700;letter-spacing:-.01em;">Mohamed Essam Abu Emira</div>
+          <div style="font-size:12px;color:#5eead4;margin-top:5px;font-weight:500;line-height:1.5;">Odoo ERP Consultant<br>Business Transformation Expert</div>
         </div>
       </div>
     </div>
