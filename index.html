@@ -10,7 +10,7 @@
 <meta property="og:url" content="https://mohamedabuemira.github.io/">
 <link rel="icon" href="./assets/img/abu-emira.jpg" type="image/jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300&family=DM+Sans:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Mohamed Essam Abu Emira","jobTitle":"ERP Operations Manager & Odoo Expert","url":"https://mohamedabuemira.github.io","email":"abuemira91@gmail.com","telephone":"+201005061349","sameAs":["https://linkedin.com/in/abuemira"]}
 </script>
@@ -19,74 +19,97 @@
    THEME TOKENS — DARK (default) + LIGHT
    ═══════════════════════════════════════════════ */
 [data-theme="dark"] {
-  --bg:        #1a0f1e;
-  --bg-2:      #22152a;
-  --bg-3:      #2d1e35;
-  --bg-card:   #22152a;
-  --bg-alt:    #160b1c;
-  --border:    rgba(255,255,255,.08);
-  --border-h:  rgba(113,75,103,.35);
-  --text:      #e8edf5;
-  --text-2:    rgba(232,237,245,.55);
-  --text-3:    rgba(232,237,245,.35);
-  --nav-bg:    rgba(10,15,26,.94);
-  --card-hover-bg: rgba(113,75,103,.04);
-  --pillar-bg: rgba(255,255,255,.04);
-  --mist:      #111827;
-  --trust-bg:  #0d1420;
-  --trust-border: rgba(255,255,255,.07);
-  --kpi-bg:    #0d1420;
-  --skill-track: rgba(255,255,255,.08);
-  --tool-bg:   rgba(255,255,255,.06);
-  --tool-color: rgba(232,237,245,.65);
-  --shadow:    0 8px 32px rgba(0,0,0,.4);
-  --shadow-lg: 0 20px 60px rgba(0,0,0,.5);
-  --footer-bg: #100616;
+  /* ── Backgrounds: deep Odoo-purple dark ── */
+  --bg:        #1C1120;
+  --bg-2:      #231428;
+  --bg-3:      #2E1B34;
+  --bg-card:   #231428;
+  --bg-alt:    #170D1B;
+  /* ── Borders ── */
+  --border:    rgba(113,75,103,.22);
+  --border-h:  rgba(113,75,103,.6);
+  /* ── Typography ── */
+  --text:      #F0EBF4;
+  --text-2:    rgba(240,235,244,.58);
+  --text-3:    rgba(240,235,244,.35);
+  /* ── Nav ── */
+  --nav-bg:    rgba(28,17,32,.96);
+  /* ── Cards ── */
+  --card-hover-bg: rgba(113,75,103,.08);
+  --pillar-bg: rgba(113,75,103,.09);
+  --trust-bg:  #170D1B;
+  --trust-border: rgba(113,75,103,.2);
+  --kpi-bg:    #170D1B;
+  /* ── Skills / Tools ── */
+  --skill-track: rgba(255,255,255,.1);
+  --tool-bg:   rgba(113,75,103,.12);
+  --tool-color: rgba(240,235,244,.68);
+  /* ── Shadows ── */
+  --shadow:    0 8px 32px rgba(0,0,0,.45);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,.55);
+  /* ── Footer ── */
+  --footer-bg: #0E0812;
   --logo-filter: none;
 }
+
 [data-theme="light"] {
-  --bg:        #ffffff;
-  --bg-2:      #f8fafc;
-  --bg-3:      #f0f4f8;
-  --bg-card:   #ffffff;
-  --bg-alt:    #f0f4f8;
-  --border:    rgba(0,0,0,.08);
-  --border-h:  rgba(113,75,103,.4);
-  --text:      #0a0f1a;
-  --text-2:    #64748b;
-  --text-3:    #94a3b8;
-  --nav-bg:    rgba(255,255,255,.94);
-  --card-hover-bg: rgba(113,75,103,.04);
-  --pillar-bg: #f0f4f8;
-  --mist:      #f0f4f8;
-  --trust-bg:  #f8fafc;
-  --trust-border: rgba(0,0,0,.07);
-  --kpi-bg:    #0a0f1a;
-  --skill-track: rgba(0,0,0,.08);
-  --tool-bg:   rgba(0,0,0,.05);
-  --tool-color: #475569;
-  --shadow:    0 4px 20px rgba(0,0,0,.07);
-  --shadow-lg: 0 16px 48px rgba(0,0,0,.1);
-  --footer-bg: #0a0f1a;
+  /* ── Backgrounds: white + soft Odoo-purple tints ── */
+  --bg:        #FFFFFF;
+  --bg-2:      #FAF7FB;
+  --bg-3:      #F2ECF5;
+  --bg-card:   #FFFFFF;
+  --bg-alt:    #F2ECF5;
+  /* ── Borders ── */
+  --border:    rgba(113,75,103,.14);
+  --border-h:  rgba(113,75,103,.45);
+  /* ── Typography: Odoo uses purple-tinted darks ── */
+  --text:      #2C1A35;
+  --text-2:    #6B5778;
+  --text-3:    #8F8F8F;
+  /* ── Nav ── */
+  --nav-bg:    rgba(255,255,255,.96);
+  /* ── Cards ── */
+  --card-hover-bg: rgba(113,75,103,.05);
+  --pillar-bg: #F2ECF5;
+  --trust-bg:  #FAF7FB;
+  --trust-border: rgba(113,75,103,.12);
+  --kpi-bg:    #2C1A35;
+  /* ── Skills / Tools ── */
+  --skill-track: rgba(113,75,103,.14);
+  --tool-bg:   rgba(113,75,103,.08);
+  --tool-color: #6B5778;
+  /* ── Shadows ── */
+  --shadow:    0 4px 20px rgba(113,75,103,.1);
+  --shadow-lg: 0 16px 48px rgba(113,75,103,.14);
+  /* ── Footer ── */
+  --footer-bg: #2C1A35;
   --logo-filter: none;
 }
 
 /* ═══════════════════════════════════════════════
-   GLOBALS
+   GLOBALS — Odoo Official Brand Colors
+   Primary (Purple) : #714B67
+   Secondary (Teal) : #017E84
+   Gray             : #8F8F8F
    ═══════════════════════════════════════════════ */
 :root {
+  /* Odoo Primary Purple */
   --gold:      #714B67;
-  --gold-lt:   #9D6E93;
+  --gold-lt:   #8F6284;
   --gold-dim:  rgba(113,75,103,.14);
+  /* Odoo Secondary Teal */
   --teal:      #017E84;
+  --teal-lt:   #019DA5;
   --teal-dim:  rgba(1,126,132,.12);
+  /* Odoo Gray */
+  --gray:      #8F8F8F;
   --r: 8px;
   --tr: .26s cubic-bezier(.4,0,.2,1);
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
   background: var(--bg); color: var(--text);
   line-height: 1.7; -webkit-font-smoothing: antialiased;
   transition: background var(--tr), color var(--tr);
@@ -94,7 +117,7 @@ body {
 h1,h2,h3,h4 { font-family: 'Inter', 'Fraunces', Georgia, serif; line-height: 1.15; font-weight: 600; }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
-::selection { background: var(--gold); color: #fff; }
+::selection { background: var(--teal); color: #fff; }
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 10px; }
 
@@ -170,7 +193,7 @@ img { display: block; max-width: 100%; }
 .hero-glow {
   position: absolute; top: -200px; right: -150px;
   width: 700px; height: 700px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(1,126,132,.1) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(1,126,132,.15) 0%, rgba(113,75,103,.05) 50%, transparent 70%);
   pointer-events: none;
 }
 .hero-inner {
@@ -450,8 +473,8 @@ img { display: block; max-width: 100%; }
   background: var(--bg-3); color: var(--text-2); border: 1px solid var(--border);
   cursor: pointer; transition: var(--tr);
 }
-.fbtn.active, .fbtn:hover { background: var(--bg-alt == '#0d1420' ? '#0a0f1a' : '#0a0f1a'); color: #fff; border-color: transparent; background: var(--text); }
-[data-theme="light"] .fbtn.active, [data-theme="light"] .fbtn:hover { background: #0a0f1a; color: #fff; }
+.fbtn.active, .fbtn:hover { background: var(--gold); color: #fff; border-color: transparent; }
+[data-theme="light"] .fbtn.active, [data-theme="light"] .fbtn:hover { background: var(--gold); color: #fff; }
 [data-theme="dark"] .fbtn.active, [data-theme="dark"] .fbtn:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
 .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .proj-card {
@@ -478,7 +501,7 @@ img { display: block; max-width: 100%; }
 .skill-name { font-weight: 500; color: var(--text); }
 .skill-pct { font-weight: 700; color: var(--teal); }
 .skill-track { height: 4px; background: var(--skill-track); border-radius: 4px; overflow: hidden; }
-.skill-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--teal), var(--gold)); transform: scaleX(0); transform-origin: left; transition: transform 1.2s cubic-bezier(.4,0,.2,1); }
+.skill-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--teal), #017E84); transform: scaleX(0); transform-origin: left; transition: transform 1.2s cubic-bezier(.4,0,.2,1); }
 .tools-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); margin-bottom: 12px; margin-top: 28px; }
 .tools-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
 .tool {
@@ -768,7 +791,7 @@ img { display: block; max-width: 100%; }
 </div>
 
 <!-- ── COMPANY LOGOS ── -->
-<div class="logos-bar">
+<!-- <div class="logos-bar">
   <div class="logos-inner">
     <div class="logos-label">Companies I've worked with</div>
     <div class="logos-grid">
@@ -809,7 +832,7 @@ img { display: block; max-width: 100%; }
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- ── ABOUT ── -->
 <section class="section" id="about">
@@ -880,7 +903,10 @@ img { display: block; max-width: 100%; }
           <div class="cur-badge">● Current Position</div>
           <div class="exp-top">
             <div class="exp-header">
+              <div class="exp-header">
+              <div class="exp-logo"><img src="./assets/img/self-employed.jpeg" alt="Self-Employed "></div>
               <div>
+                
                 <div class="exp-role">ERP Operations Manager · Odoo Expert</div>
                 <div class="exp-co">Self-Employed · Egypt & GCC Region</div>
               </div>
