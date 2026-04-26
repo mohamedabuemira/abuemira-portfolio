@@ -10,7 +10,7 @@
 <meta property="og:url" content="https://mohamedabuemira.github.io/">
 <link rel="icon" href="./assets/img/abu-emira.jpg" type="image/jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300&family=DM+Sans:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Mohamed Essam Abu Emira","jobTitle":"ERP Operations Manager & Odoo Expert","url":"https://mohamedabuemira.github.io","email":"abuemira91@gmail.com","telephone":"+201005061349","sameAs":["https://linkedin.com/in/abuemira"]}
 </script>
@@ -19,18 +19,18 @@
    THEME TOKENS — DARK (default) + LIGHT
    ═══════════════════════════════════════════════ */
 [data-theme="dark"] {
-  --bg:        #0a0f1a;
-  --bg-2:      #111827;
-  --bg-3:      #1a2436;
-  --bg-card:   #111827;
-  --bg-alt:    #0d1420;
+  --bg:        #1a0f1e;
+  --bg-2:      #22152a;
+  --bg-3:      #2d1e35;
+  --bg-card:   #22152a;
+  --bg-alt:    #160b1c;
   --border:    rgba(255,255,255,.08);
-  --border-h:  rgba(201,168,76,.35);
+  --border-h:  rgba(113,75,103,.35);
   --text:      #e8edf5;
   --text-2:    rgba(232,237,245,.55);
   --text-3:    rgba(232,237,245,.35);
   --nav-bg:    rgba(10,15,26,.94);
-  --card-hover-bg: rgba(201,168,76,.04);
+  --card-hover-bg: rgba(113,75,103,.04);
   --pillar-bg: rgba(255,255,255,.04);
   --mist:      #111827;
   --trust-bg:  #0d1420;
@@ -41,7 +41,7 @@
   --tool-color: rgba(232,237,245,.65);
   --shadow:    0 8px 32px rgba(0,0,0,.4);
   --shadow-lg: 0 20px 60px rgba(0,0,0,.5);
-  --footer-bg: #060b14;
+  --footer-bg: #100616;
   --logo-filter: none;
 }
 [data-theme="light"] {
@@ -51,12 +51,12 @@
   --bg-card:   #ffffff;
   --bg-alt:    #f0f4f8;
   --border:    rgba(0,0,0,.08);
-  --border-h:  rgba(201,168,76,.4);
+  --border-h:  rgba(113,75,103,.4);
   --text:      #0a0f1a;
   --text-2:    #64748b;
   --text-3:    #94a3b8;
   --nav-bg:    rgba(255,255,255,.94);
-  --card-hover-bg: rgba(201,168,76,.04);
+  --card-hover-bg: rgba(113,75,103,.04);
   --pillar-bg: #f0f4f8;
   --mist:      #f0f4f8;
   --trust-bg:  #f8fafc;
@@ -75,11 +75,11 @@
    GLOBALS
    ═══════════════════════════════════════════════ */
 :root {
-  --gold:      #c9a84c;
-  --gold-lt:   #e8c97a;
-  --gold-dim:  rgba(201,168,76,.14);
-  --teal:      #0d9488;
-  --teal-dim:  rgba(13,148,136,.12);
+  --gold:      #714B67;
+  --gold-lt:   #9D6E93;
+  --gold-dim:  rgba(113,75,103,.14);
+  --teal:      #017E84;
+  --teal-dim:  rgba(1,126,132,.12);
   --r: 8px;
   --tr: .26s cubic-bezier(.4,0,.2,1);
 }
@@ -91,12 +91,12 @@ body {
   line-height: 1.7; -webkit-font-smoothing: antialiased;
   transition: background var(--tr), color var(--tr);
 }
-h1,h2,h3,h4 { font-family: 'Fraunces', Georgia, serif; line-height: 1.15; font-weight: 600; }
+h1,h2,h3,h4 { font-family: 'Inter', 'Fraunces', Georgia, serif; line-height: 1.15; font-weight: 600; }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
-::selection { background: var(--gold); color: #0a0f1a; }
+::selection { background: var(--gold); color: #fff; }
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 10px; }
 
 /* ═══════════════════════════════════════════════
    THEME TOGGLE BUTTON
@@ -142,7 +142,7 @@ img { display: block; max-width: 100%; }
 }
 .nav-links a:hover { color: var(--text); background: var(--bg-3); }
 .nav-cta {
-  background: var(--gold) !important; color: #0a0f1a !important;
+  background: var(--gold) !important; color: #fff !important;
   font-weight: 600 !important; border-radius: 40px !important;
 }
 .nav-cta:hover { background: var(--gold-lt) !important; transform: translateY(-1px); }
@@ -170,7 +170,7 @@ img { display: block; max-width: 100%; }
 .hero-glow {
   position: absolute; top: -200px; right: -150px;
   width: 700px; height: 700px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(13,148,136,.1) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(1,126,132,.1) 0%, transparent 65%);
   pointer-events: none;
 }
 .hero-inner {
@@ -181,7 +181,7 @@ img { display: block; max-width: 100%; }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
-  color: var(--gold); background: var(--gold-dim); border: 1px solid rgba(201,168,76,.25);
+  color: var(--gold); background: var(--gold-dim); border: 1px solid rgba(113,75,103,.25);
   padding: 5px 14px; border-radius: 40px; margin-bottom: 26px;
 }
 .eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: blink 2.2s infinite; }
@@ -199,12 +199,12 @@ img { display: block; max-width: 100%; }
 .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 50px; }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 9px;
-  background: var(--gold); color: #0a0f1a;
+  background: var(--gold); color: #fff;
   font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600;
   padding: 13px 26px; border-radius: var(--r);
   transition: var(--tr); border: none; cursor: pointer;
 }
-.btn-primary:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(201,168,76,.25); }
+.btn-primary:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(113,75,103,.25); }
 .btn-ghost {
   display: inline-flex; align-items: center; gap: 9px;
   background: transparent; color: var(--text-2);
@@ -241,7 +241,7 @@ img { display: block; max-width: 100%; }
 .hero-photo-badge {
   position: absolute; bottom: 0; left: 0; right: 0;
   background: rgba(10,15,26,.88); backdrop-filter: blur(10px);
-  padding: 14px 18px; border-top: 1px solid rgba(201,168,76,.2);
+  padding: 14px 18px; border-top: 1px solid rgba(113,75,103,.2);
 }
 .photo-name { font-family: 'Fraunces', serif; font-size: 15px; color: #fff; font-weight: 600; }
 .photo-role { font-size: 11.5px; color: var(--gold); margin-top: 2px; font-weight: 500; }
@@ -269,7 +269,7 @@ img { display: block; max-width: 100%; }
   padding: 4px 13px; border-radius: 40px; white-space: nowrap;
   transition: var(--tr);
 }
-.cert-pill.gold { border-color: rgba(201,168,76,.3); color: var(--gold); background: var(--gold-dim); }
+.cert-pill.gold { border-color: rgba(113,75,103,.3); color: var(--gold); background: var(--gold-dim); }
 
 /* ═══════════════════════════════════════════════
    SECTIONS
@@ -355,7 +355,7 @@ img { display: block; max-width: 100%; }
 .kpi-card {
   background: var(--kpi-bg); border-radius: var(--r);
   padding: 22px 16px; text-align: center;
-  border: 1px solid rgba(201,168,76,.15);
+  border: 1px solid rgba(113,75,103,.15);
 }
 .kpi-n { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 600; color: var(--gold); line-height: 1; }
 .kpi-l { font-size: 11px; color: rgba(255,255,255,.4); margin-top: 6px; font-weight: 500; }
@@ -384,7 +384,7 @@ img { display: block; max-width: 100%; }
 }
 .svc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--border-h); }
 .svc-card:hover::after { transform: scaleX(1); }
-.svc-icon { width: 50px; height: 50px; border-radius: 10px; background: var(--gold-dim); border: 1px solid rgba(201,168,76,.2); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 18px; }
+.svc-icon { width: 50px; height: 50px; border-radius: 10px; background: var(--gold-dim); border: 1px solid rgba(113,75,103,.2); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 18px; }
 .svc-title { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 9px; }
 .svc-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.7; margin-bottom: 18px; }
 .svc-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
@@ -397,7 +397,7 @@ img { display: block; max-width: 100%; }
 .timeline { position: relative; padding-left: 28px; }
 .timeline::before {
   content: ''; position: absolute; left: 5px; top: 8px; bottom: 8px; width: 2px;
-  background: linear-gradient(to bottom, var(--gold), rgba(201,168,76,.1));
+  background: linear-gradient(to bottom, var(--gold), rgba(113,75,103,.1));
 }
 .exp-item { position: relative; padding-bottom: 32px; }
 .exp-item:last-child { padding-bottom: 0; }
@@ -405,7 +405,7 @@ img { display: block; max-width: 100%; }
   position: absolute; left: -26px; top: 10px;
   width: 12px; height: 12px; border-radius: 50%;
   background: var(--bg-card); border: 2.5px solid var(--gold);
-  box-shadow: 0 0 0 4px rgba(201,168,76,.1);
+  box-shadow: 0 0 0 4px rgba(113,75,103,.1);
 }
 .exp-dot.cur { background: var(--gold); }
 .exp-card {
@@ -416,7 +416,7 @@ img { display: block; max-width: 100%; }
 .cur-badge {
   display: inline-flex; align-items: center; gap: 7px;
   font-size: 11px; font-weight: 700; color: var(--teal);
-  background: var(--teal-dim); border: 1px solid rgba(13,148,136,.25);
+  background: var(--teal-dim); border: 1px solid rgba(1,126,132,.25);
   border-radius: 6px; padding: 3px 10px; margin-bottom: 10px;
 }
 .cur-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); animation: blink 2s infinite; }
@@ -428,7 +428,7 @@ img { display: block; max-width: 100%; }
 .exp-co { font-size: 13px; color: var(--gold); font-weight: 600; margin-top: 1px; }
 .exp-date {
   font-size: 11.5px; font-weight: 700; color: var(--teal);
-  background: var(--teal-dim); border: 1px solid rgba(13,148,136,.2);
+  background: var(--teal-dim); border: 1px solid rgba(1,126,132,.2);
   padding: 3px 12px; border-radius: 40px; white-space: nowrap; flex-shrink: 0;
 }
 .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 7px; margin-top: 14px; }
@@ -452,7 +452,7 @@ img { display: block; max-width: 100%; }
 }
 .fbtn.active, .fbtn:hover { background: var(--bg-alt == '#0d1420' ? '#0a0f1a' : '#0a0f1a'); color: #fff; border-color: transparent; background: var(--text); }
 [data-theme="light"] .fbtn.active, [data-theme="light"] .fbtn:hover { background: #0a0f1a; color: #fff; }
-[data-theme="dark"] .fbtn.active, [data-theme="dark"] .fbtn:hover { background: var(--gold); color: #0a0f1a; border-color: var(--gold); }
+[data-theme="dark"] .fbtn.active, [data-theme="dark"] .fbtn:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
 .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .proj-card {
   background: var(--bg-card); border: 1px solid var(--border);
@@ -464,7 +464,7 @@ img { display: block; max-width: 100%; }
 .c-con{background:#fee2e2;color:#991b1b}.c-mfg{background:#fef3c7;color:#92400e}.c-food{background:#d1fae5;color:#065f46}
 .c-log{background:#ede9fe;color:#4c1d95}.c-ret{background:#fce7f3;color:#9d174d}.c-hot{background:#e0f2fe;color:#0c4a6e}
 .c-gov{background:#f3f4f6;color:#374151}.c-npo{background:#dcfce7;color:#14532d}.c-re{background:#fff7ed;color:#7c2d12}
-.proj-ver { font-size: 10px; font-weight: 700; color: var(--teal); background: var(--teal-dim); border: 1px solid rgba(13,148,136,.2); padding: 2px 8px; border-radius: 5px; }
+.proj-ver { font-size: 10px; font-weight: 700; color: var(--teal); background: var(--teal-dim); border: 1px solid rgba(1,126,132,.2); padding: 2px 8px; border-radius: 5px; }
 .proj-name { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 5px; line-height: 1.3; }
 .proj-mods { font-size: 12px; color: var(--text-3); line-height: 1.55; }
 
@@ -486,7 +486,7 @@ img { display: block; max-width: 100%; }
   border-radius: 40px; background: var(--tool-bg); color: var(--tool-color);
   border: 1px solid var(--border); transition: var(--tr);
 }
-.tool.f { background: var(--gold-dim); border-color: rgba(201,168,76,.3); color: var(--gold); }
+.tool.f { background: var(--gold-dim); border-color: rgba(113,75,103,.3); color: var(--gold); }
 .tool:hover { border-color: var(--teal); color: var(--teal); }
 
 /* ═══════════════════════════════════════════════
@@ -501,8 +501,8 @@ img { display: block; max-width: 100%; }
 }
 .cert-hl-card:hover { border-color: var(--border-h); background: var(--card-hover-bg); transform: translateY(-2px); box-shadow: var(--shadow); }
 .cert-badge { width: 46px; height: 46px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 12px; font-weight: 700; flex-shrink: 0; }
-.cb-teal { background: var(--teal-dim); color: var(--teal); border: 1px solid rgba(13,148,136,.3); }
-.cb-gold { background: var(--gold-dim); color: var(--gold); border: 1px solid rgba(201,168,76,.3); }
+.cb-teal { background: var(--teal-dim); color: var(--teal); border: 1px solid rgba(1,126,132,.3); }
+.cb-gold { background: var(--gold-dim); color: var(--gold); border: 1px solid rgba(113,75,103,.3); }
 .cb-blue { background: rgba(59,130,246,.12); color: #93c5fd; border: 1px solid rgba(59,130,246,.3); }
 .cb-green { background: rgba(34,197,94,.12); color: #86efac; border: 1px solid rgba(34,197,94,.3); }
 .cb-sap { background: #0070f3; color: #fff; border: 1px solid #0050c0; }
@@ -585,7 +585,7 @@ img { display: block; max-width: 100%; }
 .soc-link:hover { border-color: var(--border-h); color: var(--gold); }
 .contact-cta-card {
   background: var(--bg-alt); border-radius: 14px; padding: 34px;
-  border: 1px solid rgba(201,168,76,.15);
+  border: 1px solid rgba(113,75,103,.15);
 }
 .cta-title { font-size: 21px; font-weight: 600; color: var(--text); margin-bottom: 10px; }
 .cta-sub { font-size: 14px; color: var(--text-2); line-height: 1.7; margin-bottom: 22px; }
@@ -594,12 +594,12 @@ img { display: block; max-width: 100%; }
 .avail-list li::before { content: "✓"; color: var(--gold); font-weight: 700; }
 .cta-book {
   display: flex; align-items: center; justify-content: center; gap: 9px;
-  width: 100%; background: var(--gold); color: #0a0f1a;
+  width: 100%; background: var(--gold); color: #fff;
   font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700;
   padding: 14px; border-radius: var(--r); border: none;
   cursor: pointer; transition: var(--tr); text-decoration: none; margin-bottom: 10px; display: flex;
 }
-.cta-book:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(201,168,76,.25); }
+.cta-book:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(113,75,103,.25); }
 .cta-wa {
   display: flex; align-items: center; justify-content: center; gap: 9px;
   width: 100%; background: #25D366; color: #fff;
@@ -612,7 +612,7 @@ img { display: block; max-width: 100%; }
 /* ═══════════════════════════════════════════════
    FOOTER
    ═══════════════════════════════════════════════ */
-.footer { background: var(--footer-bg); padding: 30px 60px; border-top: 1px solid rgba(201,168,76,.1); }
+.footer { background: var(--footer-bg); padding: 30px 60px; border-top: 1px solid rgba(113,75,103,.1); }
 .footer-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
 .footer-text { font-size: 13px; color: rgba(255,255,255,.3); }
 .footer-links { display: flex; gap: 20px; }
@@ -625,14 +625,14 @@ img { display: block; max-width: 100%; }
 #scrollTop {
   position: fixed; bottom: 86px; right: 24px;
   width: 44px; height: 44px; border-radius: 50%;
-  background: var(--bg-3); color: var(--gold); border: 1px solid rgba(201,168,76,.3);
+  background: var(--bg-3); color: var(--gold); border: 1px solid rgba(113,75,103,.3);
   font-size: 17px; cursor: pointer;
   opacity: 0; transform: translateY(10px);
   transition: var(--tr); z-index: 400;
   display: flex; align-items: center; justify-content: center;
 }
 #scrollTop.vis { opacity: 1; transform: translateY(0); }
-#scrollTop:hover { background: var(--gold); color: #0a0f1a; }
+#scrollTop:hover { background: var(--gold); color: #fff; }
 #waFloat {
   position: fixed; bottom: 28px; right: 24px;
   width: 50px; height: 50px; border-radius: 50%;
@@ -680,6 +680,16 @@ img { display: block; max-width: 100%; }
   .ind-grid { grid-template-columns: 1fr 1fr; }
   .logos-grid { gap: 20px; }
 }
+
+/* All Recommendations Grid - Responsive */
+@media (max-width: 960px) {
+  #allRecs { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 600px) {
+  #allRecs { grid-template-columns: 1fr !important; }
+}
+.test-card .test-author { flex-wrap: nowrap; }
+
 </style>
 </head>
 <body>
@@ -757,8 +767,8 @@ img { display: block; max-width: 100%; }
   </div>
 </div>
 
-<!--── COMPANY LOGOS ──-->
-<!-- <div class="logos-bar">
+<!-- ── COMPANY LOGOS ── -->
+<div class="logos-bar">
   <div class="logos-inner">
     <div class="logos-label">Companies I've worked with</div>
     <div class="logos-grid">
@@ -799,7 +809,7 @@ img { display: block; max-width: 100%; }
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 <!-- ── ABOUT ── -->
 <section class="section" id="about">
@@ -1119,13 +1129,329 @@ img { display: block; max-width: 100%; }
     <div class="section-head">
       <div class="section-tag">28+ Recommendations</div>
       <h2 class="section-title">What clients & colleagues <em>say</em></h2>
+      <p class="section-sub">Real feedback from ERP professionals, clients, and partners across Egypt, Saudi Arabia & GCC.</p>
     </div>
-    <div class="test-grid">
-      <div class="test-card fu"><div class="test-qmark">"</div><div class="test-text">Mohammad was my go-to colleague for finance and accounting consulting. He's precise, professional, time-sensitive and dependable. Most importantly, I fully trust him. I'd love to work with him again anytime.</div><div class="test-author"><div class="test-av">HE</div><div><div class="test-name">Hesham Elmahdy</div><div class="test-role">Co-Founder @ OdooTec</div></div></div></div>
-      <div class="test-card fu" style="transition-delay:.07s"><div class="test-qmark">"</div><div class="test-text">We had a great experience working with Mohamed on our ERP. His strong technical expertise combined with solid accounting knowledge allowed him to deliver a seamless and tailored Odoo solution that fully met our requirements.</div><div class="test-author"><div class="test-av">MK</div><div><div class="test-name">Mohamed Khalil</div><div class="test-role">Founder & CEO @ PlatFarm</div></div></div></div>
-      <div class="test-card fu" style="transition-delay:.04s"><div class="test-qmark">"</div><div class="test-text">Mohamed is one of the best Odoo Consultants I've worked with. He has the ability to simplify complex requirements and ensure they're done with the best quality. A kind and helpful professional you'd love on your team.</div><div class="test-author"><div class="test-av">AE</div><div><div class="test-name">Ahmed Elsayed</div><div class="test-role">Senior Python / Odoo Developer</div></div></div></div>
-      <div class="test-card fu" style="transition-delay:.11s"><div class="test-qmark">"</div><div class="test-text">Mohamed delivered our full Odoo 17 implementation on time and exceeded expectations on every module. His knowledge of the construction industry allowed us to go live with confidence. He never disappears after delivery.</div><div class="test-author"><div class="test-av">SB</div><div><div class="test-name">Samer Barakat</div><div class="test-role">CEO — Construction Co., Saudi Arabia</div></div></div></div>
+
+    <!-- TOP 4 FEATURED -->
+    <div class="test-grid" style="margin-bottom:16px;">
+      <div class="test-card fu">
+        <div class="test-qmark">"</div>
+        <div class="test-text">Mohamed has been an integral part of my team as a senior Odoo Implementer for five years. He consistently demonstrated a deep technical understanding of the Odoo ecosystem and a unique ability to translate complex business requirements into functional, scalable solutions. A rare find in the ERP space.</div>
+        <div class="test-author">
+          <div class="test-av">AH</div>
+          <div>
+            <div class="test-name">Ahmed Hassan Algammal</div>
+            <div class="test-role">VP of Sales @ Absolute ERP</div>
+          </div>
+          <a href="#" target="_blank" style="margin-left:auto;font-size:11px;color:var(--teal);font-weight:600;white-space:nowrap;">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="test-card fu" style="transition-delay:.06s">
+        <div class="test-qmark">"</div>
+        <div class="test-text">I am pleased to recommend Mohamed Essam — one of the most skilled professionals in ERP Consulting, Business Analysis, and Odoo Project Management. His strong analytical skills, deep understanding of business needs, and ability to optimize operations make him a valuable asset to any team.</div>
+        <div class="test-author">
+          <div class="test-av">AA</div>
+          <div>
+            <div class="test-name">Ahmed Abdelhak</div>
+            <div class="test-role">SAP FI/CO · Odoo ERP Consultant & PM</div>
+          </div>
+          <a href="https://www.linkedin.com/in/ahmed-abdelhak-23855566/" target="_blank" style="margin-left:auto;font-size:11px;color:var(--teal);font-weight:600;white-space:nowrap;">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="test-card fu" style="transition-delay:.03s">
+        <div class="test-qmark">"</div>
+        <div class="test-text">Mohammad was my go-to colleague for finance and accounting consulting. He's precise, professional, time-sensitive and dependable. Most importantly, I fully trust him. I'd love to work with him again anytime.</div>
+        <div class="test-author">
+          <div class="test-av">HE</div>
+          <div>
+            <div class="test-name">Hesham Elmahdy</div>
+            <div class="test-role">Co-Founder @ OdooTec</div>
+          </div>
+          <a href="https://www.linkedin.com/in/heshamelmahdy/" target="_blank" style="margin-left:auto;font-size:11px;color:var(--teal);font-weight:600;white-space:nowrap;">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="test-card fu" style="transition-delay:.09s">
+        <div class="test-qmark">"</div>
+        <div class="test-text">I had the pleasure of working alongside Mohamed at Odootec. His strong technical skills and deep understanding of ERP systems, particularly financial accounting and supply chain, were invaluable. His problem-solving skills and attention to detail ensured projects were completed on time and within budget.</div>
+        <div class="test-author">
+          <div class="test-av">AG</div>
+          <div>
+            <div class="test-name">Ahmed Galal, PMP® PBA®</div>
+            <div class="test-role">Business Consultant & Odoo PM</div>
+          </div>
+          <a href="https://www.linkedin.com/in/ahmed-galal-pmp%C2%AE-pba%C2%AE-29b170169/" target="_blank" style="margin-left:auto;font-size:11px;color:var(--teal);font-weight:600;white-space:nowrap;">LinkedIn ↗</a>
+        </div>
+      </div>
     </div>
+
+    <!-- ALL RECOMMENDATIONS GRID -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;" id="allRecs">
+
+      <div class="test-card fu" style="padding:18px 20px;transition-delay:.04s">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">We had a great experience working with Mohamed on our ERP. His strong technical expertise combined with solid accounting knowledge allowed him to deliver a seamless and tailored Odoo solution that fully met our requirements. Highly recommended.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">MK</div>
+          <div><div class="test-name" style="font-size:13px;">Mohamed Khalil</div><div class="test-role">Founder & CEO @ PlatFarm</div></div>
+          <a href="https://www.linkedin.com/in/mohamed-khalil-a0ba2515/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;transition-delay:.06s">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">Mohamed is one of the best Odoo Consultants I worked with. He has the ability to simplify complex requirements and ensure they're done with the best quality. A kind and helpful professional you'd love to have in your work environment.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">AE</div>
+          <div><div class="test-name" style="font-size:13px;">Ahmed Elsayed</div><div class="test-role">Senior Python / Odoo Developer</div></div>
+          <a href="https://www.linkedin.com/in/damhogy/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;transition-delay:.08s">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">I had the pleasure of working with Mohamed Issam — exceptional analytical skills, a talent for solving complex challenges, and profound expertise in Odoo ERP accounting and financial implementation. A great team player who consistently delivers results.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">MD</div>
+          <div><div class="test-name" style="font-size:13px;">Mohsen DIFALLAH</div><div class="test-role">Python / Odoo Developer</div></div>
+          <a href="https://www.linkedin.com/in/mohsen-difallah-496b35a4/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">One of the most dedicated technical guys I worked with. Your deep understanding of what you're doing reflects in the success of your projects.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">MN</div>
+          <div><div class="test-name" style="font-size:13px;">Mohammad Nasab</div><div class="test-role">Regional Partner Manager @ Odoo</div></div>
+          <a href="https://www.linkedin.com/in/mohammad-nasab97/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">Mohamed was very talented — a professional accountant and Odoo implementer with the ability to handle customers well by building great relationships. He is eager to learn and develop multiple skills.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">AR</div>
+          <div><div class="test-name" style="font-size:13px;">Ahmed Rashad</div><div class="test-role">ERP / Odoo Project Manager</div></div>
+          <a href="https://www.linkedin.com/in/ahmedrashad11/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">Mohamed Essam is a very dedicated person to his work and customers. His professionalism and expertise were evident throughout our collaboration.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">YS</div>
+          <div><div class="test-name" style="font-size:13px;">Yasser A. AL Samhouri</div><div class="test-role">Finance Manager | Budgeting & Forecasting</div></div>
+          <a href="https://www.linkedin.com/in/yasser-arafat-al-samhouri/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">I wholeheartedly recommend Mohamed Essam Abu Emira for any Odoo-related project. His expertise and dedication make him an asset to any team.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">ME</div>
+          <div><div class="test-name" style="font-size:13px;">Mohamed Eldabbas</div><div class="test-role">Marketing & Technical Writer</div></div>
+          <a href="https://www.linkedin.com/in/mohamed-eldabbas-6a1679151/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">I have worked with Muhammad Abu Amira for nearly two years. I recommend him to any company that needs a reliable person — experienced functional consultant, systems analyst, problem solver, multi-skilled, and an expert in accounting.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">MM</div>
+          <div><div class="test-name" style="font-size:13px;">Muhammad Mahmoud</div><div class="test-role">Sr. Odoo Functional Consultant | Certified v15·v16</div></div>
+          <a href="https://www.linkedin.com/in/muhammad-m-abod/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">I highly recommend Mohamed Essam Abu Emira as an exceptional Odoo Functional Consultant. His expertise in Odoo, ability to analyze complex requirements, and bridge the gap between functional and technical aspects make him a valuable asset.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">BH</div>
+          <div><div class="test-name" style="font-size:13px;">Bassant Hossam</div><div class="test-role">SAI & Automation Engineer</div></div>
+          <a href="https://www.linkedin.com/in/bassant-hossam-366403208/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">بشمهندس محمد واحد من أكثر الناس اللي قابلتهم تركيزاً وتفانياً في الشغل ورغبةً في تعلم الجديد وتطوير الذات. دا بجانب خبرته الكبيرة في الحسابات وأودو طبعاً. إنسان محترم وخلوق وأتمنى له التوفيق دائماً.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">MR</div>
+          <div><div class="test-name" style="font-size:13px;">Mostafa Rohaim</div><div class="test-role">JDE Specialist at Exact Fabrication</div></div>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">During the time we worked together, Mohamed was highly professional, efficient, and an excellent Odoo consultant. He always aspired to improve himself in all aspects and went beyond expectations.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">MA</div>
+          <div><div class="test-name" style="font-size:13px;">Muhammed Abdelfatah</div><div class="test-role">AI Track Supervisor at ITI</div></div>
+          <a href="https://www.linkedin.com/in/muhammed-abdelfatah-a45ab9104/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">Mohamed and I worked together on several projects at Odootec. He consistently gave 100% effort to the team and played a significant role in ensuring we completed all tasks on time.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">MS</div>
+          <div><div class="test-name" style="font-size:13px;">Mohamed Salah Helal</div><div class="test-role">Odoo Developer | Data Scientist</div></div>
+          <a href="https://www.linkedin.com/in/mohamed-salah-helal/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">Muhamad is a hardworking, skilled, and dedicated professional whose eagerness to learn is limitless. His expertise and determination make him a remarkable asset to any team.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">AG</div>
+          <div><div class="test-name" style="font-size:13px;">Abdulrahman Gwida</div><div class="test-role">DipIFR | FMVA | Odoo Specialist</div></div>
+          <a href="https://www.linkedin.com/in/abdelrahman-gwida/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">I'm thrilled that I worked with Mohamed on several projects. He is one of the best people I had as a coworker. He can tackle any problem remarkably with hard and smart work.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">MN</div>
+          <div><div class="test-name" style="font-size:13px;">Mohamed Nayel</div><div class="test-role">Software Test Engineer @ Transflo</div></div>
+          <a href="https://www.linkedin.com/in/momagdinayel/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">One of the best functional consultants I've ever worked with. Great co-worker and mentor.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">NH</div>
+          <div><div class="test-name" style="font-size:13px;">Nourhan Hazim</div><div class="test-role">Software Testing Engineer at Celfocus</div></div>
+          <a href="https://www.linkedin.com/in/nourhan-hazim/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">Abu Emira is specialized in Accounting, performed Odoo implementation, support, and training for end users. He worked for clients in Egypt, Saudi Arabia, and Canada.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">AT</div>
+          <div><div class="test-name" style="font-size:13px;">Ayman Tobbala</div><div class="test-role">Senior Odoo Functional Consultant</div></div>
+          <a href="https://www.linkedin.com/in/aymantobbala/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">Mohamed was one of the colleagues who helped me understand Odoo and business practices in general. He is also one of the most dedicated coworkers I've known.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">AS</div>
+          <div><div class="test-name" style="font-size:13px;">Ahmed Saeed</div><div class="test-role">Python & Odoo Technical Consultant</div></div>
+          <a href="https://www.linkedin.com/in/ahmed-saeed-75a2938b/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">Mohamed Essam is one of the hardworking individuals. I worked with him personally — he knows what he is doing according to professional principles. I wish you success, my friend.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">AM</div>
+          <div><div class="test-name" style="font-size:13px;">Ahmed Malik</div><div class="test-role">CFO</div></div>
+          <a href="https://www.linkedin.com/in/ahmed-malik-a4462a143/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">I have worked with Mohamed for a while. He is so helpful in teamwork, and has never hesitated to share his knowledge with others.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">YA</div>
+          <div><div class="test-name" style="font-size:13px;">Yousef Ashraf</div><div class="test-role">Odoo Developer at Intalio</div></div>
+          <a href="https://www.linkedin.com/in/yousef-a-luka/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">Mohamed is a very dedicated, loyal person. He is always ready to take over all the work responsibility.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">HA</div>
+          <div><div class="test-name" style="font-size:13px;">Heba Allam</div><div class="test-role">HR & Administration Manager</div></div>
+          <a href="https://www.linkedin.com/in/heba-allam-2194231b/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">Professional and can handle clients very well.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">CF</div>
+          <div><div class="test-name" style="font-size:13px;">Caroline Farid</div><div class="test-role">Marketer</div></div>
+          <a href="https://www.linkedin.com/in/caroline-farid-a39546221/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">Essam is a very hard-working person, dedicated and ambitious. I enjoyed teaching him.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">AY</div>
+          <div><div class="test-name" style="font-size:13px;">Aya Mohsen</div><div class="test-role">Strategy & Corporate Development Sr. Manager</div></div>
+          <a href="https://www.linkedin.com/in/aya-mohsen-cma-fmva-3919a875/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">Mr. Mohamed is one of the best colleagues I've worked with.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">AF</div>
+          <div><div class="test-name" style="font-size:13px;">Amr Farouk</div><div class="test-role">ERP Technical Support Manager</div></div>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">Excellent and professional.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">FH</div>
+          <div><div class="test-name" style="font-size:13px;">Faical Hafiane</div><div class="test-role">CEO @ FAMFOOD | International Trade Expert</div></div>
+          <a href="https://www.linkedin.com/in/faical-hafiane/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">He is a hard worker.</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">AE</div>
+          <div><div class="test-name" style="font-size:13px;">Ahmed Ezzat Embaby</div><div class="test-role">Financial Analyst at Ebny Real Estate</div></div>
+          <a href="https://www.linkedin.com/in/ahmed-ezzat-embaby-11607645/" target="_blank" style="margin-left:auto;font-size:10px;color:var(--teal);font-weight:700;">↗</a>
+        </div>
+      </div>
+
+      <div class="test-card fu" style="padding:18px 20px;">
+        <div class="test-qmark" style="font-size:38px;">"</div>
+        <div class="test-text" style="font-size:13px;">Excellent</div>
+        <div class="test-author">
+          <div class="test-av" style="width:34px;height:34px;font-size:11px;">AT</div>
+          <div><div class="test-name" style="font-size:13px;">Ashif TK</div><div class="test-role">Accounting Professional & Audit Assistant</div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:32px;">
+      <a href="https://www.linkedin.com/in/abuemira/" target="_blank" class="btn-ghost" style="display:inline-flex;">
+        🔗 View All Recommendations on LinkedIn
+      </a>
+    </div>
+
   </div>
 </section>
 
